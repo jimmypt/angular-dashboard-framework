@@ -1624,6 +1624,14 @@ angular.module('adf')
             }
           }
 
+          if ( !definition.deleteTemplateUrl ) {
+              definition.deleteTemplateUrl = adfTemplatePath + 'widget-delete.html';
+              if ( w.deleteTemplateUrl ) {
+                  definition.deleteTemplateUrl = w.deleteTemplateUrl;
+              }
+          }
+
+          
           if (!definition.titleTemplateUrl) {
             definition.frameless = w.frameless;
           }
